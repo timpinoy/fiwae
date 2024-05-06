@@ -15,6 +15,12 @@ Afterwards from the main directory run the below and make your user
 python manage.py migrate
 python manage.py createsuperuser
 ```
+# Run
+Start the server with
+```
+python manage.py runserver
+```
+Browse to [http://127.0.0.1:8000/finance/](http://127.0.0.1:8000/finance/)
 
 # Other
 Bootstrap theme used: [SB Admin](https://startbootstrap.com/template/sb-admin)
