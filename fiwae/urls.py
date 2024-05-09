@@ -1,5 +1,5 @@
 """
-URL configuration for fiwaedjango project.
+URL configuration for fiwae project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -15,20 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from rest_framework import routers
-
-from finance import views
-
-router = routers.DefaultRouter()
-router.register(r'transactions', views.TransactionViewset)
-router.register(r'categories', views.CategoryViewset)
+from django.urls import path
 
 urlpatterns = [
-    path("", include(router.urls)),
-    path("finance/", include("finance.urls")),
-    path("admin/", admin.site.urls, name="admin"),
-    path("accounts/", include("django.contrib.auth.urls")),
+    path('admin/', admin.site.urls),
 ]
-
-
